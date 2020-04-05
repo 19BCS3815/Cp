@@ -1,26 +1,20 @@
 #include<bits/stdc++.h>
+#include <cstdlib>
+#include <string>
 using namespace std;
 #define ll      long long int
-int solve(int x)
-{
-    int r,t,sum=0,i=0;
-    while(x>=1){
-    r=x%9;
-    t=r*pow(10,i);
-    sum+=t;
-     i++;
-     x=x/9;
-     }
-     cout<<sum<<endl;
-
+long long base9(long long n){
+if(n<9)
+return n;
+else{
+return(n%9 + 10*base9(n/9));
+}
 }
 int main(){
-        int i;
-        cin>>i;
-        if(i<9)
-        cout<<i<<endl;
-        else
-        solve(i);
-
+string str;
+long long n;
+while(getline(cin,str)){
+n = strtoll(str.c_str(),NULL, 0);
+cout<<base9(n)<<"\n";}
         return 0;
 }
