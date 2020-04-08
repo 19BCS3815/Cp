@@ -1,0 +1,28 @@
+#include <bits/stdc++.h>
+
+
+
+using namespace std;
+
+int main()
+{
+    int r, c, a[5][5], i, j;
+
+
+
+    // Storing elements of first matrix entered by user.
+    for(i = 0; i <5; ++i)
+       for(j = 0; j < 5; ++j)
+       {
+
+           cin >> a[i][j];
+           if(a[i][j]==1)
+           {
+               r=i,c=j;
+           }
+       }
+cout<<(abs(2-r)+abs(2-c));
+    // Storing elements of second matrix entered by user.
+
+    return 0;
+}
